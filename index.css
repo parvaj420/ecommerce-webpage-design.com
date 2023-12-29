@@ -1,0 +1,431 @@
+/* <!-- / \\\\\\\\\\\\ main start/////////////////////  --> */
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    max-width: 1600px;
+}
+.section1, .section3 .col-md-5, .section4{
+    overflow-x: hidden;
+}
+.click-item{
+    background:radial-gradient(rgb(255, 0, 0),rgb(255, 0, 0),rgb(238, 0, 0),rgb(0, 0, 0),rgb(255, 204, 0),black,rgb(0, 0, 0));
+    left: -150%;
+    transition: .4s;
+  }
+  .btn-close{scale: 2; margin-top: 20px; z-index: 9;}
+  .click-item-pill{
+    width: 8vw;
+    height: 8vw;
+    padding: 2vw;
+    backdrop-filter: blur(4px);
+    box-shadow: inset 0 0 15px goldenrod;
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    animation: morph 3s ease infinite;
+    bottom: 0;
+    overflow: hidden;
+    animation: top 5s ease infinite;
+    transition: 1s;
+    transform: translate(0);
+  }
+  .click-item-pill:nth-child(2){left: 0;  animation: top 10s ease infinite;}
+  .click-item-pill:nth-child(3){left: 10%; animation: top 7s ease infinite;}
+  .click-item-pill:nth-child(4){left: 20%; animation: top 5s ease .5s infinite;}
+  .click-item-pill:nth-child(5){left: 30%; animation: top 7s ease .5s infinite;}
+  .click-item-pill:nth-child(6){left: 50%; animation: top 4s ease 1s infinite;}
+  .click-item-pill:nth-child(7){left: 40%; animation: top 8s ease infinite;}
+  .click-item-pill:nth-child(8){left: 60%; animation: top 6s ease infinite;}
+  .click-item-pill:nth-child(9){left: 70%; animation: top 5s ease .5s infinite;}
+  .click-item-pill:nth-child(10){left: 80%; animation: top 5s ease .2s infinite;}
+  .click-item-pill:nth-child(11){left: 90%; animation: top 5s ease 1s infinite;}
+  .click-item-pill:nth-child(12){left: 0;  animation: top 8s ease infinite;}
+  .click-item-pill:nth-child(13){left: 10%; animation: top 10s ease infinite;}
+  .click-item-pill:nth-child(14){left: 20%; animation: top 8s ease .5s infinite;}
+  .click-item-pill:nth-child(15){left: 30%; animation: top 3s ease .5s infinite;}
+  .click-item-pill:nth-child(16){left: 50%; animation: top 8s ease 1s infinite;}
+  .click-item-pill:nth-child(17){left: 40%; animation: top 4s ease infinite;}
+  .click-item-pill:nth-child(18){left: 60%; animation: top 9s ease infinite;}
+  .click-item-pill:nth-child(19){left: 70%; animation: top 8s ease .5s infinite;}
+  .click-item-pill:nth-child(20){left: 80%; animation: top 3s ease .2s infinite;}
+@keyframes morph{
+      0%,
+      100%{
+          border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+      }
+      30%{
+          border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+      }
+      60%{
+          border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+      }
+      80%{
+          border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+      }
+  }
+@keyframes top{
+     0%{bottom: 0%; opacity: 0;}
+     20%{opacity: 1; transform: translate(40px);}
+     60%{transform: translate(0px);}
+     80%{transform: translate(-40px);}
+     100%{bottom: 100%; opacity: 0; transform: translate(0);}
+ }
+/* <!-- / \\\\\\\\\\\\\\\ main end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box1 start/////////////////////  --> */
+.nav-link{
+    font-weight: 700;
+    position: relative;
+    color: #000000;
+    display: inline-block;
+    transition: .8s;
+}
+.nav-link:hover{transform: rotateY(30deg);}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 6%;
+    background-color: #000000;
+    transition: .3s;
+}
+nav .active::before{
+    width: 100%;
+}
+.nav-link:hover::before{
+    width: 100%;
+}
+section{
+    padding: 50px 10px;
+    /* padding: 150px 0; */
+}
+.section1{
+    /* background:rgb(229, 226, 231); */
+    background: linear-gradient(rgb(229, 226, 231) 75%,rgb(238, 238, 238));
+}
+
+.section1 img{
+    width: 70%;
+}
+.section1 .h1{
+    
+    overflow: hidden;
+}
+.section1 .h1 h1{
+    font-size: 70px;
+    display: inline;
+}
+.section1 p{
+    margin-top: 50px;
+    font-size: 2rem;
+}
+.section1 button{
+    font-size: 2vw;
+    width: max-content;
+    height: max-content;
+    padding: 15px;
+    position: relative;
+    transition: .3s;
+}
+.section1 button::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    background-blend-mode:difference;z-index: -1;
+    transition: .4s;
+    border-radius: 100px;
+}
+.section1 button:hover::before{
+    width: 100%;
+    height: 100%;
+}
+.section1 button:hover{color: #000000;}
+.section1 .pa1{
+    color: #fff;
+    cursor: pointer;
+    transform: translate(0, 60px);
+}
+ button span{
+    font-size: 1.5rem;
+    text-wrap: nowrap;
+    z-index: 2;
+    position: absolute;
+    color: aliceblue;
+    top: 20%; left: 0; right: 0; margin: auto;
+    transition: .5s;
+}
+button:hover span{
+    color: black;
+}
+button:active span {
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+}
+button{
+    position: relative;
+    width: 14vw;
+    height: 5vw;
+    border-radius: 100px;
+    border: none;
+    color: aliceblue;
+    font-size: 1.1vw;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    background: black;
+}
+button .btnDiv{
+    background-color: #ffffff;
+    background-blend-mode:lighten;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    pointer-events: none;
+    top: -100px;
+    left: -100px;
+     transition: 1.5s;
+} 
+button:hover .btnDiv{
+    width: 600px;
+    height: 400px;
+    /* use img
+    -webkit-mask-image: url();
+    -webkit-mask-size: contain; */
+}
+/* <!-- / \\\\\\\\\\\\\\\ box1 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box2 start/////////////////////  --> */
+.section2 .section2copy{padding-top: 150px;}
+.section2 h1, .section2copy h1{
+    font-size: 50px;
+    font-weight: 400;
+}
+.section2 p, .section2copy p{
+    margin-top: 15px;
+    font-size: 23px;
+}
+.section2 button, .section2copy button{
+    margin-top: 30px;
+    width: 250px;
+    height: 70px;
+}
+/* <!-- / \\\\\\\\\\\\\\\ box2 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box3 start/////////////////////  --> */
+.hoverText{
+    position: relative;
+    font-size: 2vw;
+    margin: 20px 0;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+}
+.hoverText::before{
+    content: "";
+    bottom: 0;
+    position: absolute;
+    height: 5%;
+    width: 0%;
+    background-color: black;
+    transition: .3s;
+}
+.hoverText:hover::before{
+    width: 100%;
+}
+.section3 img{
+    border-radius: 20px;
+}
+
+/* <!-- / \\\\\\\\\\\\\\\ box3 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box4 start/////////////////////  --> */
+.section4 .item1{
+    overflow: hidden;
+    border-radius: 25px;
+}
+.section4  h1{
+    font-size: 50px;
+}
+.section4  p{
+    font-size: 25px;
+}
+.section4 .item1 .col-md-6{
+    padding: 20px;
+    background:rgb(255, 126, 111);
+    color: #ffffff;
+}
+
+/* <!-- / \\\\\\\\\\\\\\\ box4 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box5 start/////////////////////  --> */
+.section5 button{
+    width: 200px;
+    height: 70px;
+    margin-bottom: 30px;
+}
+.section5 img{
+    border-radius: 15px;
+}
+.section5 .col-md-6{
+    margin: 50px 0;
+}
+.section5 .col-md-6 h1{
+    line-height: 120px;
+    font-size: 45px;
+}
+.section5 .col-md-6 p{
+    font-size: 25px;
+}
+.section5 .hoverText{
+    display: inline; line-height: normal; font-size: 25px;
+}
+.section5 .section2{
+    padding: 0;
+    margin: 0;
+}
+.section5 .section2 button{
+    width: 130px;
+    height: 50px;
+}
+.section5 .section2 button span{top: 4px;}
+/* <!-- / \\\\\\\\\\\\\\\ box5 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box6 start/////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box6 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box7 start/////////////////////  --> */
+.section7 .text-dark{
+    font-size: 25px;
+}
+.section7 button{
+    background: #ffffff;
+    border: 1px solid white;
+}
+.section7 button{
+    width: 220px;
+    height: 70px;
+}
+.section7 button span{color: #000000;}
+.section7 button span:hover{color: #ffffff;}
+.section7 button .btnDiv{background: black;}
+.section7  .col-md-6{
+    margin-top: 20px;
+    transition: .3s;
+}
+.section7 .col-md-7 .col-md-6:hover{padding: 7px; cursor: pointer;}
+/* <!-- / \\\\\\\\\\\\\\\ box7 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box8 start/////////////////////  --> */
+.section8 button{
+    width: 200px;
+    height: 50px;
+}
+.section8 button span{top: 3px;}
+.section8 .item1 .batch{
+    width: 150px;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 100%, 0 80%);
+    position: relative;
+    font-weight: 700;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.481));
+    overflow-x: visible;
+  }
+  .section8 .item1 .batch::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(235, 235, 235);
+    z-index: -1;
+    clip-path: polygon(0% 80%, 100% 0, 100% 100%, 0 100%);
+  }
+  .section8 .item1 .batch .fa-squarespace{
+    background: red;
+    color: #fff;
+    padding: 5px;
+    clip-path: polygon(0 0, 100% 0%, 100% 60%, 50% 100%, 0 60%);
+  }
+  .section8 .item1 .batch h1{
+    font-weight: 700;
+  }
+  .section8 .item1 .batch .redBox{
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    padding: 0 20px;
+    /* clip-path: polygon(95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%, 5% 0); */
+  }
+/* <!-- / \\\\\\\\\\\\\\\ box8 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box9 start/////////////////////  --> */
+.section9 button{
+    width: 160px;
+    height: 50px;
+}
+.section9 button span{
+    top: 3px;
+}
+.item4{background: rgb(56, 129, 255);}
+ .item4 h1{
+    padding: 150px 0;
+}
+.item5 a{
+    cursor: pointer;
+    transition: .2s;
+    color: rgb(51, 255, 0);
+}
+.item5 .p-5 a:hover{color: rgb(46, 211, 0);}
+.item5::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    bottom: 0;
+}
+/* <!-- / \\\\\\\\\\\\\\\ box9 end /////////////////////  --> */
+/* <!-- / \\\\\\\\\\\\\\\ box10 start/////////////////////  --> */
+footer{
+    padding: 100px 50px 0;
+}
+footer h1{
+    font-weight: 700;
+}
+footer small{
+    color: #393939;
+}
+footer .gap-3 a{
+    color: #393939;
+    text-decoration: none;
+    margin: 20px 0;
+}
+footer a{
+    color: #393939;
+    text-decoration: none;
+}
+/* <!-- / \\\\\\\\\\\\\\\ box10 end /////////////////////  -->*/
+@media (max-width:767px){
+    .section4 .item1 .col-md-6:nth-child(1){
+        color: rgb(255, 126, 111);
+        background: rgba(255, 0, 0, 0);
+    }
+    .section3 .hoverText{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:650px) {
+    .section1 img{
+        width: 90%;
+    }
+    .section1 .h1 h1{
+        font-size: 9vw;
+    }
+    .section1 p{
+        margin-top: 8vw;
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:500px) {
+     .section1 button{
+        margin-top: 8vw;
+        border-radius: 100px;
+        font-size: 10.1px;
+    }
+}
